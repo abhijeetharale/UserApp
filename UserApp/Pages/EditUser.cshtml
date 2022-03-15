@@ -1,0 +1,93 @@
+﻿@page
+@model UserApp.Pages.EditUserModel
+@{
+    ViewData["Title"] = "EditUser";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Edit User</h2>
+
+<style>
+    .marginRow {
+        margin-top: -10px;
+    }
+</style>
+<form method="post">
+    <div class="container">
+        <div class="row backgroundWhite border" style="margin:5px;">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Users.Name"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Users.Name" class="form-control" />
+                            <input asp-for="Users.Id" class="form-control" style="display:none;"/>
+                        </div>
+                        <span asp-validation-for="Users.Name" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group marginRow">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Users.Email"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Users.Email" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Users.Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group marginRow">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Users.PhoneNumber"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Users.PhoneNumber" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Users.PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group marginRow">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Users.Address"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Users.Address" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Users.Address" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group marginRow">
+                    <div class="row">
+                        <div class="col-4">
+                            <label asp-for="Users.City"></label>
+                        </div>
+                        <div class="col-8">
+                            <input asp-for="Users.City" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Users.City" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-8">
+                            <button type="submit" class="btn btn-success form-control">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
